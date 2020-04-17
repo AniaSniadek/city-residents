@@ -24,6 +24,7 @@ public class Main {
                     System.out.println(ANSI_RED + "Incorrect pesel number! Try again!" + ANSI_RESET);
                     i--;
                 }
+                System.out.println("------------------------------------------");
             }
 
             citizens.showList();
