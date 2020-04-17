@@ -25,6 +25,7 @@ public class Main {
             }
 
             citizens.showList();
+            citizens.saveDataToFile();
 
         } else {
             System.out.println(Colors.ANSI_RED + "Invalid input!" + Colors.ANSI_RESET);

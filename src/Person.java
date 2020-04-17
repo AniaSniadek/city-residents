@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class Person {
 
-    public String city;
-    public String name;
-    public String surname;
-    public String pesel;
+    private String city;
+    private String name;
+    private String surname;
+    private String pesel;
 
     public void writePerson(){
         Scanner scanner = new Scanner(System.in);
