@@ -13,13 +13,6 @@ public class Person {
 //    }
 
 
-    public Person(String city, String name, String surname, String pesel) {
-        this.city = city;
-        this.name = name;
-        this.surname = surname;
-        this.pesel = pesel;
-    }
-
     public boolean checkPesel() {
 
         if(getPesel().length() != 11)
