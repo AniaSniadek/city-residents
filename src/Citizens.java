@@ -1,3 +1,5 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Vector;
@@ -7,7 +9,6 @@ public class Citizens {
     static Vector<Person> peopleList = new Vector<Person>();
 
     public void addPerson(Person person){
-//
         for(Person p : peopleList){
             if(p.getPesel().equals(person.getPesel())){
                 System.out.println(Colors.ANSI_RED + "User with this number of pesel already exists!" + Colors.ANSI_RESET);
@@ -33,5 +34,24 @@ public class Citizens {
         }
     }
 
-
+    public void saveDataToFile() {
+        sortList();
+        FileWriter localFile = null;
+        try {
+            localFile = new FileWriter("citizens.txt");
+            for(Person p : peopleList){
+                localFile.write(p.getDetailsAsString() + '\n');
+            }
+        } catch (IOException e){
+            System.out.println(Colors.ANSI_RED + "Error in writing data to file!" + Colors.ANSI_RESET);
+            e.printStackTrace();
+        } finally {
+            try {
+                if(localFile != null)
+                    localFile.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }

@@ -20,7 +20,6 @@ public class Person {
     }
 
     public boolean checkPesel() {
-
         if(this.getPesel().length() != 11)
             return false;
 
