@@ -1,3 +1,5 @@
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Vector;
 
 public class Citizens {
@@ -15,10 +17,22 @@ public class Citizens {
         }
     }
 
+    public void sortList() {
+        Collections.sort(peopleList, new Comparator<Person>() {
+            @Override
+            public int compare(Person p1, Person p2) {
+                return p1.getName().compareTo(p2.getName());
+            }
+        });
+    }
+
     public void showList() {
+        sortList();
         System.out.println("List of citizens in the system:");
         for(Person p: peopleList){
             System.out.println(p.getDetailsAsString());
         }
     }
+
+
 }
