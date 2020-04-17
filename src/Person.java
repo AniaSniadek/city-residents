@@ -29,7 +29,6 @@ public class Person {
                 (this.getPesel().charAt(5) - '0') + (this.getPesel().charAt(9) - '0'))) +
                 (3 * ((this.getPesel().charAt(2) - '0') + (this.getPesel().charAt(6) - '0'))) +
                 (this.getPesel().charAt(3) - '0') + (this.getPesel().charAt(7) - '0');
-        System.out.println(sum);
         int score = sum % 10;
 
         if(score == (this.getPesel().charAt(10) - '0'))

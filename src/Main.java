@@ -2,22 +2,22 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static final Person person = new Person();
-
     public static void main(String[] args){
-        writePerson();
-        System.out.println(person.getCity());
-        System.out.println(person.getName());
-    }
 
-    public static void writePerson(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the city: ");
-        String city = scanner.nextLine();
-        person.setCity(city);
-        System.out.println("Enter name: ");
-        String name = scanner.nextLine();
-        person.setName(name);
-    }
+        Citizens citizens = new Citizens();
+        int ilosc;
+        System.out.println("Wpisz ile osob dodac: ");
+        ilosc = scanner.nextInt();
 
+        for(int i=0; i < ilosc; i++){
+            Person person = new Person();
+            person.writePerson();
+            if(person.checkPesel()){
+                citizens.addPerson(person);
+            } else {
+                System.out.println("Error");
+            }
+        }
+    }
 }
