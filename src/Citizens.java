@@ -8,12 +8,11 @@ public class Citizens {
 
     public void addPerson(Person person){
 //
-//        for(Person p : peopleList){
-//            if(p.getPesel().equals(person.getPesel())){
-//                System.out.println("Uzytkownik o podanym peselu juz istnieje");
-//                return;
-//            }
-//        }
+        for(Person p : peopleList){
+            if(p.getPesel().equals(person.getPesel())){
+                System.out.println(Colors.ANSI_RED + "User with this number of pesel already exists!" + Colors.ANSI_RESET);
+            }
+        }
         peopleList.add(person);
     }
 
