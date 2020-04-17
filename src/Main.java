@@ -2,12 +2,17 @@ import java.util.Scanner;
 
 public class Main {
 
+    private static Scanner scanner = new Scanner(System.in);
+
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_RED = "\u001B[31m";
+
     public static void main(String[] args){
 
-        Scanner scanner = new Scanner(System.in);
+
         Citizens citizens = new Citizens();
         int ilosc;
-        System.out.println("Wpisz ile osob dodac: ");
+        System.out.println("Enter how many people you want to add to the system: ");
         ilosc = scanner.nextInt();
 
         for(int i=0; i < ilosc; i++){
@@ -16,7 +21,7 @@ public class Main {
             if(person.checkPesel()){
                 citizens.addPerson(person);
             } else {
-                System.out.println("Error");
+                System.out.println(ANSI_RED + "Error! Incorrect pesel number!" + ANSI_RESET);
             }
         }
     }
