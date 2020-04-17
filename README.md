@@ -5,4 +5,4 @@ The project involves adding citizens with their pesel number. The pesel is check
 
 ## Built With
 
-* [React](https://reactjs.org)
+* [Java](https://docs.oracle.com/en/java/)
