@@ -25,6 +25,9 @@ public class Main {
                     i--;
                 }
             }
+
+            citizens.showList();
+
         } else {
             System.out.println(ANSI_RED + "Invalid input!" + ANSI_RESET);
             System.exit(0);

@@ -7,21 +7,21 @@ public class Citizens {
     static Vector<Person> peopleList = new Vector<Person>();
 
     public void addPerson(Person person){
-
-        for(Person p : peopleList){
-            if(p.getPesel().equals(person.getPesel())){
-                System.out.println("Uzytkownik o podanym peselu juz istnieje");
-                return;
-            }
-            peopleList.add(person);
-        }
+//
+//        for(Person p : peopleList){
+//            if(p.getPesel().equals(person.getPesel())){
+//                System.out.println("Uzytkownik o podanym peselu juz istnieje");
+//                return;
+//            }
+//        }
+        peopleList.add(person);
     }
 
     public void sortList() {
         Collections.sort(peopleList, new Comparator<Person>() {
             @Override
             public int compare(Person p1, Person p2) {
-                return p1.getName().compareTo(p2.getName());
+                return p1.getSurname().compareTo(p2.getSurname());
             }
         });
     }
