@@ -70,8 +70,8 @@ public class Person {
     }
 
     public String getDetailsAsString(){
-        String text = this.getCity() + " " + this.getName() + " " +
-                    this.getSurname() + " " + this.getPesel();
+        String text = this.getSurname() + " " + this.getName() + " | " +
+                    this.getCity() + " | " + this.getPesel();
         return text;
     }
 }
