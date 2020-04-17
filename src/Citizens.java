@@ -28,7 +28,7 @@ public class Citizens {
 
     public void showList() {
         sortList();
-        System.out.println("List of citizens in the system:");
+        System.out.println(Colors.ANSI_CYAN + "List of citizens in the system:" + Colors.ANSI_RESET);
         for(Person p: peopleList){
             System.out.println(p.getDetailsAsString());
         }

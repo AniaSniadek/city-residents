@@ -4,9 +4,6 @@ public class Main {
 
     private static Scanner scanner = new Scanner(System.in);
 
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_RED = "\u001B[31m";
-
     public static void main(String[] args){
 
 
@@ -21,16 +18,16 @@ public class Main {
                 if(person.checkPesel()){
                     citizens.addPerson(person);
                 } else {
-                    System.out.println(ANSI_RED + "Incorrect pesel number! Try again!" + ANSI_RESET);
+                    System.out.println(Colors.ANSI_RED + "Incorrect pesel number! Try again!" + Colors.ANSI_RESET);
                     i--;
                 }
-                System.out.println("------------------------------------------");
+                System.out.println(Colors.ANSI_GREEN + "------------------------------------------" + Colors.ANSI_RESET);
             }
 
             citizens.showList();
 
         } else {
-            System.out.println(ANSI_RED + "Invalid input!" + ANSI_RESET);
+            System.out.println(Colors.ANSI_RED + "Invalid input!" + Colors.ANSI_RESET);
             System.exit(0);
         }
 
