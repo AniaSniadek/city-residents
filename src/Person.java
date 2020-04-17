@@ -48,10 +48,25 @@ public class Person {
         return pesel;
     }
 
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setPesel(String pesel) {
+        this.pesel = pesel;
+    }
+
     public String getDetailsAsString(){
         String text = this.getCity() + " " + this.getName() + " " +
                     this.getSurname() + " " + this.getPesel();
         return text;
     }
-
 }
