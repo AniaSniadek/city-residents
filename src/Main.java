@@ -11,18 +11,18 @@ public class Main {
 
 
         Citizens citizens = new Citizens();
-        int ilosc;
         System.out.println("Enter how many people you want to add to the system: ");
 
         if(scanner.hasNextInt()){
-            ilosc = scanner.nextInt();
-            for(int i=0; i < ilosc; i++){
+            int amount = scanner.nextInt();
+            for(int i=0; i < amount; i++){
                 Person person = new Person();
                 person.writePerson();
                 if(person.checkPesel()){
                     citizens.addPerson(person);
                 } else {
-                    System.out.println(ANSI_RED + "Error! Incorrect pesel number!" + ANSI_RESET);
+                    System.out.println(ANSI_RED + "Incorrect pesel number! Try again!" + ANSI_RESET);
+                    i--;
                 }
             }
         } else {

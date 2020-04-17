@@ -9,12 +9,12 @@ public class Person {
 
     public void writePerson(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the city: ");
-        this.setCity(scanner.nextLine());
         System.out.println("Enter name: ");
         this.setName(scanner.nextLine());
         System.out.println("Enter surname: ");
         this.setSurname(scanner.nextLine());
+        System.out.println("Enter the city: ");
+        this.setCity(scanner.nextLine());
         System.out.println("Enter pesel: ");
         this.setPesel(scanner.nextLine());
     }
