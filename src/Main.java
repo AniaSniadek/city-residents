@@ -13,16 +13,23 @@ public class Main {
         Citizens citizens = new Citizens();
         int ilosc;
         System.out.println("Enter how many people you want to add to the system: ");
-        ilosc = scanner.nextInt();
 
-        for(int i=0; i < ilosc; i++){
-            Person person = new Person();
-            person.writePerson();
-            if(person.checkPesel()){
-                citizens.addPerson(person);
-            } else {
-                System.out.println(ANSI_RED + "Error! Incorrect pesel number!" + ANSI_RESET);
+        if(scanner.hasNextInt()){
+            ilosc = scanner.nextInt();
+            for(int i=0; i < ilosc; i++){
+                Person person = new Person();
+                person.writePerson();
+                if(person.checkPesel()){
+                    citizens.addPerson(person);
+                } else {
+                    System.out.println(ANSI_RED + "Error! Incorrect pesel number!" + ANSI_RESET);
+                }
             }
+        } else {
+            System.out.println(ANSI_RED + "Invalid input!" + ANSI_RESET);
+            System.exit(0);
         }
+
+
     }
 }
