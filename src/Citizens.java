@@ -14,4 +14,11 @@ public class Citizens {
             peopleList.add(person);
         }
     }
+
+    public void showList() {
+        System.out.println("List of citizens in the system:");
+        for(Person p: peopleList){
+            System.out.println(p.getDetailsAsString());
+        }
+    }
 }
